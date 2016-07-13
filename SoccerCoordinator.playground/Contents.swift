@@ -27,22 +27,59 @@ let herschel = ["name": "Herschel Krustofski", "height": 45, "experienced": true
 
 let allPlayers = [joeSmith, jill, bill, eva, matt, kimmy, sammy, karl, suzane, sal, joeK, ben, diego, chloe, arnold, phillip, les, herschel]
 
+// Number of teams needed
+let numberOfTeams = 3
+
 // Set variable for number of players per team
 let numberOfPlayersPerTeam = allPlayers.count/3
 
-// Set variable for number of experienced players needed per team
-for player in allPlayers {
-    
-}
-
 // Put all experienced players in an array
 
+var experiencedPlayers = [AnyObject]()
+
 // Put all inexperienced players in an array
+var inexperiencedPlayers = [AnyObject]()
+
+joeSmith["experienced"]
+
+for player in allPlayers {
+    if player["experienced"] == true {
+        experiencedPlayers.append(player)
+    } else {
+        inexperiencedPlayers.append(player)
+    }
+}
 
 // Create arrays for each of three teams
 
-// Loop through players, putting 1/3 in each team with 1/3 experienced players and 2/3 inexperienced players
+var dragons = [AnyObject]()
+var sharks = [AnyObject]()
+var raptors = [AnyObject]()
+
+// Loop through players, putting 1/3 in each team with 1/3 experi   enced players and 2/3 inexperienced players
+for player in experiencedPlayers {
+    // need 1/3 of # of players experienced players per team
+    if dragons.count < experiencedPlayers.count/numberOfTeams {
+        dragons.append(player)
+    } else if sharks.count < experiencedPlayers.count/numberOfTeams {
+        sharks.append(player)
+    } else {
+        raptors.append(player)
+    }
+}
+
+for player in inexperiencedPlayers {
+    if dragons.count < numberOfPlayersPerTeam {
+        dragons.append(player)
+    } else if sharks.count < numberOfPlayersPerTeam {
+        sharks.append(player)
+    } else {
+        raptors.append(player)
+    }
+}
 
 // Loop through each team and print custom letter
 
-
+for player in raptors {
+    print(player)
+}
