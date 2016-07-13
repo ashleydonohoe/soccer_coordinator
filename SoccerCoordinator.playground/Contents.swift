@@ -79,7 +79,14 @@ for player in inexperiencedPlayers {
 }
 
 // Loop through each team and print custom letter
+for player in dragons {
+    print("Dear \(player["parents"]), Your child \(player["name"]) has been placed on the Dragons team and will have his or her team practice on March 17th at 1PM. We look forward to a fun season! Sincerely, Team Organizer")
+}
 
-for player in raptors {
-    print(player)
+for player in sharks {
+    print("Dear \(player["parents"]), Your child \(player["name"]) has been placed on the Sharks team and will have his or her team practice on March 17th at 3PM. We look forward to a fun season! Sincerely, Team Organizer")
+}
+
+for player in dragons {
+    print("Dear \(player["parents"]), Your child \(player["name"]) has been placed on the Raptors team and will have his or her team practice on March 18th at 1PM. We look forward to a fun season! Sincerely, Team Organizer")
 }
